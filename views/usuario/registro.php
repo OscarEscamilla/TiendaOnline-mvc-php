@@ -1,4 +1,21 @@
 <h5 class="mb-3">Registrate</h5>
+
+<?php
+  
+
+    if (isset($_SESSION['registro'])) {
+
+        $mensaje =  $_SESSION['registro'];
+        echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                <strong>Registro $mensaje</strong> 
+                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                    <span aria-hidden='true'>&times;</span>
+                </button>
+            </div>";
+    }
+?>
+
+
 <form action="<?php echo base_url?>usuario/save"  method="POST" class="">
     <div class="form-group">
         <label class="col-form-label col-form-label-sm" for="nombre">Nombre</label>

@@ -21,8 +21,23 @@ class usuarioController{
             $modelUsuario->setEmail($_POST['email']);
             $modelUsuario->setPassword($_POST['password']);
 
+            $save = $modelUsuario->save();
+            if($save){
 
-            var_dump($modelUsuario);
+                $_SESSION['registro'] = 'completado';
+                //echo "Registro completado!";
+            }else{
+
+                $_SESSION['registro'] = 'fallido';
+                //echo "Registro fallido";
+            }
+
+        }else{
+            $_SESSION['registro'] = 'fallido';
+            header('Location:'.base_url.'usuario/registro');
         }
+        header('Location:'.base_url.'usuario/registro');
+
+        
     }
 }
