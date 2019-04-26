@@ -4,12 +4,12 @@
                 <div class="card text-white bg-primary ml-3 mt-3 mb-3" >
                     <div class="card-header"><h4>Log in</h4></div>
                     <div class="card-body">
-                        <form action="" method="POST" class="">
+                        <form action="<?php echo base_url; ?>/usuario/login" method="POST" class="">
                             <div class="form-group">
-                                <input type="text" name="" id="" class="form-control-sm in" placeholder="Usuario">
+                                <input type="email" name="email" id="" class="form-control-sm in" placeholder="Usuario">
                             </div>
                             <div class="form-group">
-                                <input type="password" name="" id="" class="form-control-sm in" placeholder="Password">
+                                <input type="password" name="password" id="" class="form-control-sm in" placeholder="Password">
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-success btn-sm btn-block" type="submit">Ingresar</button>

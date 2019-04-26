@@ -81,8 +81,8 @@ class Usuario{
     public function save(){
         try {
             //$con = $this->db->connect();
-            $sentencia = $this->con->prepare("INSERT INTO usuarios (nombre, apellidos, email, password, rol, imagen) VALUES (?, ?, ?, ?, ?, ?)");
-            $resultado = $sentencia->execute([
+            $statement = $this->con->prepare("INSERT INTO usuarios (nombre, apellidos, email, password, rol, imagen) VALUES (?, ?, ?, ?, ?, ?)");
+            $query = $statement->execute([
                 $this->getNombre(),
                 $this->getApellidos(), 
                 $this->getEmail(),
@@ -92,7 +92,7 @@ class Usuario{
             #execute regresa un booleano. True en caso de que todo vaya bien, falso en caso contrario.
             #Con eso podemos evaluar
 
-            if ($resultado) {
+            if ($query) {
                 return true;
             }
 
@@ -106,6 +106,30 @@ class Usuario{
             return false;
         }
 
+    }
+
+    //verificar que exista el usuario
+    public function login($email, $password){
+        try {
+
+            $statement = $this->con->prepare("SELECT * FROM usuarios WHERE email= ? AND password = ?");
+            $query = $statement->execute([$email, $password]);
+           
+            var_dump($statement);
+            while( $row = $query->fetch() ){ //recorremos la consulta a tabla login y recorremos el resultado
+
+                var_dump($row);
+  
+               
+            }
+
+
+        } catch (PDOException $e) {
+
+            echo "Error-002 model-usuario action-login".$e->getMessage();
+
+        }
+       
     }
 
 
