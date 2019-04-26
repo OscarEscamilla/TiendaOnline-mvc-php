@@ -5,14 +5,25 @@
 
     if (isset($_SESSION['registro'])) {
 
-        $mensaje =  $_SESSION['registro'];
-        echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
-                <strong>Registro $mensaje</strong> 
+
+        if($_SESSION['registro'] == 'completado'){
+
+            $alerta = 'success';
+            
+        }elseif ($_SESSION['registro'] == 'fallido') {
+            
+            $alerta = 'danger';
+            
+        }
+        echo "<div class='alert alert-".$alerta." alert-dismissible fade show' role='alert'>
+                <strong>Registro ".$_SESSION['registro']."</strong> 
                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                     <span aria-hidden='true'>&times;</span>
                 </button>
-            </div>";
+                </div>";
     }
+
+    Utils::deleteSession('registro');
 ?>
 
 
