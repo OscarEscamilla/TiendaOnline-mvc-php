@@ -1,5 +1,5 @@
 <?php
-
+require_once 'models/Usuario.php';
 
 class usuarioController{
 
@@ -13,7 +13,16 @@ class usuarioController{
 
     public function save(){
         if(isset($_POST)){
-            var_dump($_POST);
+            
+            $modelUsuario = new Usuario();
+
+            $modelUsuario->setNombre($_POST['nombre']);
+            $modelUsuario->setApellidos($_POST['apellidos']);
+            $modelUsuario->setEmail($_POST['email']);
+            $modelUsuario->setPassword($_POST['password']);
+
+
+            var_dump($modelUsuario);
         }
     }
 }
