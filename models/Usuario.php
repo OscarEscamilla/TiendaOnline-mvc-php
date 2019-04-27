@@ -111,17 +111,30 @@ class Usuario{
     //verificar que exista el usuario
     public function login($email, $password){
         try {
-
+            /*
+            $con = Database::connect();
             $statement = $this->con->prepare("SELECT * FROM usuarios WHERE email= ? AND password = ?");
             $query = $statement->execute([$email, $password]);
            
-            var_dump($statement);
-            while( $row = $query->fetch() ){ //recorremos la consulta a tabla login y recorremos el resultado
+            echo $query;
+            */
 
-                var_dump($row);
-  
-               
+            $stmt = $this->con->prepare('SELECT * FROM usuarios WHERE email = :email AND password = :password ');
+
+            $stmt->execute(array('email' => $email, 'password' => $password));
+
+            $resultado = $stmt->fetchAll();
+
+            
+
+            if($resultado){
+                echo "siexiste el user";
             }
+
+
+        
+
+            
 
 
         } catch (PDOException $e) {

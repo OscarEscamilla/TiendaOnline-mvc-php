@@ -4,7 +4,7 @@
                 <div class="card text-white bg-primary ml-3 mt-3 mb-3" >
                     <div class="card-header"><h4>Log in</h4></div>
                     <div class="card-body">
-                        <form action="<?php echo base_url; ?>/usuario/login" method="POST" class="">
+                        <form action="<?php echo base_url; ?>usuario/login" method="POST" class="">
                             <div class="form-group">
                                 <input type="email" name="email" id="" class="form-control-sm in" placeholder="Usuario">
                             </div>
