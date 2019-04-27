@@ -109,7 +109,7 @@ class Usuario{
     }
 
     //verificar que exista el usuario
-    public function login($email, $password){
+    public function login(){
         try {
             /*
             $con = Database::connect();
@@ -121,14 +121,19 @@ class Usuario{
 
             $stmt = $this->con->prepare('SELECT * FROM usuarios WHERE email = :email AND password = :password ');
 
-            $stmt->execute(array('email' => $email, 'password' => $password));
+            $stmt->execute(array('email' => $this->getEmail(), 'password' => $this->getPassword()));
 
             $resultado = $stmt->fetchAll();
 
             
 
             if($resultado){
-                echo "siexiste el user";
+
+                foreach ($resultado as $row) {
+                    $this->setRol($row['rol']);
+                    $this->setPassword($row['password']);
+                }
+                return $resultado;
             }
 
 
