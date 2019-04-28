@@ -100,8 +100,7 @@ class Usuario{
 
         } catch (PDOException $e) {
             
-            echo "Error-001-UserModel-insert";
-            echo $e->getMessage();
+            $error = "email-duplicate";
 
             return false;
         }
@@ -145,6 +144,8 @@ class Usuario{
         } catch (PDOException $e) {
 
             echo "Error-002 model-usuario action-login".$e->getMessage();
+
+            
 
         }
        

@@ -1,3 +1,11 @@
 .in{
     width: 100% !important;
 }
+
+.bg-dark{
+    background: #232323 !important;
+}
+
+.btn-primary{
+    background: #3b3ec0 !important;
+}

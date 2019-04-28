@@ -20,6 +20,8 @@ class usuarioController{
         require_once 'views/usuario/registro.php';
     }
 
+   
+
     // registro de usuario 
     public function save(){
         if(isset($_POST)){
@@ -33,7 +35,7 @@ class usuarioController{
 
             $save = $this->modelUsuario->save();
             if($save){
-
+                
                 $_SESSION['registro'] = 'completado';
                 //echo "Registro completado!";
             }else{
@@ -44,9 +46,10 @@ class usuarioController{
 
         }else{
             $_SESSION['registro'] = 'fallido';
-            header('Location:'.base_url.'usuario/registro');
+           
         }
-        header('Location:'.base_url.'usuario/registro'); 
+        
+        $this->registro();
     }
 
 
@@ -66,32 +69,48 @@ class usuarioController{
             if($usuario && count($usuario) == 1){ //evaluamos si la variable usuario da true y ademas el numero de filas es = 1 
                
                 $_SESSION['usuario'] = $usuario;//creamos la sesion del usuario
-
-                var_dump($_SESSION['usuario']);
               
                 if($this->modelUsuario->getRol() == 'admin'){
-
-                   
-                    echo " y es admin :O";
                     
-                    $_SESSION['admin'] = 'true';
-
-                    var_dump($_SESSION['admin']);
-
-                    
+                    $_SESSION['admin'] =  true;   
                 }
 
             }else{
                 //invalidar session y mostrar mensaje
-                echo "Correo o contraseña invalidos";
+                
+                $_SESSION['error_login'] = 'Correo o contraseña invalidos';
+
+                
             }
+
+
+     
+
+            header('Location:'.base_url);
+         
+            
            
         
-
+            
         }
-        //header('Location:'.base_url);
+        
 
         //crear session
 
+    }
+
+    public function cerrar_sesion(){
+
+        if (isset($_SESSION['usuario'])) {
+            unset($_SESSION['usuario']);
+        }
+
+        if (isset($_SESSION['admin'])) {
+            unset($_SESSION['admin']);
+        }
+
+        header('Location:'.base_url);
+
+       
     }
 }
