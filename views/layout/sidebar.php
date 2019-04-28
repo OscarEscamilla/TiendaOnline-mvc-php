@@ -24,9 +24,9 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                     </div>
-                                    <!--<?php Utils::deleteSession('error_login');
-                                    header('Location:'.base_url)?>-->
+                                    
                                 <?php endif; ?>
+                                <?php Utils::deleteSession('error_login');?>
                                 <div class="form-group">
                                     <button class="btn btn-raised btn-success btn-sm btn-block " type="submit">Ingresar</button>
                                 </div>
@@ -46,10 +46,10 @@
 
         <div class="list-group ml-3 bg-dark">
                 <a href="#" class="list-group-item list-group-item-action active  bg-dark"> Mis pedidos</a>
-                
+                <?php if(isset($_SESSION['admin'])):?>
                     <a href="#" class="list-group-item list-group-item-action active  bg-dark">Gestionar Pedidos</a>
                     <a href="#" class="list-group-item list-group-item-action active  bg-dark">Gestionar Categorias</a>
-                
+                <?php endif; ?>
                 <a href="<?php echo base_url?>usuario/cerrar_sesion" class="list-group-item list-group-item-action active  bg-dark">Cerrar Sesion</a>
         </div>
     </div>
