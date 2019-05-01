@@ -33,26 +33,33 @@
                             </form>
                         </div> 
                     
-                <?php else:?>
+                <?php else: ?>
                     <!--si la sesion ya existe vamos a mostrarlos datos de usuario-->
                     <div class="card-header text-white bg-dark m-0"><h4><?php echo $_SESSION['usuario'][0][1].' '.$_SESSION['usuario'][0][2];?></h4></div>
                     <div class="p-3">
                         <p><?php echo $_SESSION['usuario'][0][3];?></p>
                     </div>
-                <?php endif;?>
+                <?php endif; ?>
             </div>
         </div>
 
-
-        <div class="list-group ml-3 bg-dark">
-                <a href="#" class="list-group-item list-group-item-action active  bg-dark"> Mis pedidos</a>
+        <?php if(isset($_SESSION['usuario'])):?>
+            <div class="list-group ml-3 mr-0 bg-dark">
+        <?php endif; ?>
                 <?php if(isset($_SESSION['admin'])):?>
                     <a href="#" class="list-group-item list-group-item-action active  bg-dark">Gestionar Pedidos</a>
-                    <a href="#" class="list-group-item list-group-item-action active  bg-dark">Gestionar Categorias</a>
+                    <a href="<?php echo base_url; ?>categoria/index" class="list-group-item list-group-item-action active  bg-dark">Gestionar Categorias</a>
                 <?php endif; ?>
-                <a href="<?php echo base_url?>usuario/cerrar_sesion" class="list-group-item list-group-item-action active  bg-dark">Cerrar Sesion</a>
-        </div>
+                <?php if(isset($_SESSION['usuario'])):?>
+                <a href="#" class="list-group-item list-group-item-action active  bg-dark"> Mis pedidos</a>
+                <a href="<?php echo base_url; ?>usuario/cerrar_sesion" class="list-group-item list-group-item-action active  bg-dark">Cerrar Sesion
+                <img src="<?php echo base_url; ?>assets/img/logout.svg" alt="" class="icon ml-2">
+                </a>
+                <?php endif; ?>
+        <?php if(isset($_SESSION['usuario'])):?>
+            </div>
+        <?php endif; ?>
     </div>
     <div class="col-md-9 mt-3 p-0">
-        <div class="card ">
-            <div class="card-body m-3">
+        <div class="card">
+            <div class="card-body m-0 p-0">

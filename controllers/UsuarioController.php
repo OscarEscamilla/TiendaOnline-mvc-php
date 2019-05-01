@@ -75,6 +75,7 @@ class usuarioController{
                     $_SESSION['admin'] =  true;   
                 }
 
+                
             }else{
                 //invalidar session y mostrar mensaje
                 
@@ -82,15 +83,9 @@ class usuarioController{
 
                 
             }
-
-
-     
-
-            header('Location:'.base_url);
-         
-        
-           
-        
+            
+            header('Location:'.base_url);    
+            
             
         }
         

@@ -7,6 +7,8 @@ class Utils{
 
             $_SESSION[$nombre] = null;
             unset($_SESSION[$nombre]);
+
+            
         }
         
     }

@@ -4,6 +4,12 @@
 class categoriaController{
 
     public function index(){
-        echo "controller categoria action index";
+        require_once 'views/categoria/index.php';
     }
+
+
+    
+
+
+    
 }
