@@ -5,10 +5,10 @@
     
     <div class="col-md-8"></div>
     <div class="col-md-4">
-    <form action="<?php echo base_url;?>categoria/agregar" method="POST" class="form-inline"> <!-- envia los datos  por post al CategoriacController metodo agregar -->
+    <form action="<?php echo base_url;?>categoria/save" method="POST" class="form-inline"> <!-- envia los datos  por post al CategoriacController metodo agregar -->
         <div class="form-group">
-            <label for="email" class="bmd-label-floating">Añadir Categoria</label>
-            <input type="email" name="email" id="" class="form-control in" >
+            <label for="nombre" class="bmd-label-floating">Añadir Categoria</label>
+            <input type="text" name="nombre" id="" class="form-control in" >
         </div>
         <span class="form-group bmd-form-group"> <!-- needed to match padding for floating labels -->
             <button type="submit" class="btn btn-raised btn-primary ml-2">Añadir</button>
@@ -19,40 +19,39 @@
 
     <div class="row">
     <div class="col-md-12">
-    
+    <?php if (isset($_SESSION['alert'])):?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        ¡Categoria guardada!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <?php Utils::deleteSession('alert'); ?>
+    <?php endif; ?>
     <!-- tabla que muestra todas las categoria -->
-
-        <table class="table">
-            <thead class="thead-dark">
+   
+        <table class="table table-striped">
+            <thead >
                 <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Nombre</th>
-                <th scope="col">Last</th>
                 <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>
-                    <a href="<?php echo base_url;?>/categoria/update"><img src="<?php echo base_url;?>assets/img/icon-update.svg" style="whidt: 3px; "alt=""></a>
-                    <a href="<?php echo base_url;?>/categoria/delete"><img src="<?php echo base_url;?>assets/img/icon-delete.svg" alt=""></a>
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                </tr>
+               
+                    <?php foreach ($result as $row):?> 
+                        <tr>
+                            <th scope="row"><?php echo $row['id'];?></th>
+                            <td><?php echo $row['nombre'];?></td>
+                            <td>
+                                <a href="<?php echo base_url;?>/categoria/delete&id=<?php echo $row['id'];?>"><img src="<?php echo base_url;?>assets/img/icon-delete.svg" alt=""></a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                
+                
+                
             </tbody>
         </table>    
     

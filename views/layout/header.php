@@ -22,21 +22,15 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+            <?php $menu = Utils::showCategorias(); ?>
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Categoria1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Categoria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">categoria</a>
-                </li>
+                <?php foreach($menu as $row):?>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><?php echo $row['nombre']; ?></a>
+                    </li>
+                <?php endforeach; ?>
+
                 </ul>
                 
             </div>

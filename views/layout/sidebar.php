@@ -30,6 +30,7 @@
                                 <div class="form-group">
                                     <button class="btn btn-raised btn-success btn-sm btn-block " type="submit">Ingresar</button>
                                 </div>
+                                <a href="<?php echo base_url?>usuario/registro" >Registrarme</a>
                             </form>
                         </div> 
                     
