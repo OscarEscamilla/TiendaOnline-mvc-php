@@ -3,22 +3,22 @@
 <div class="pl-15">
     <div class="row">
     
-    <div class="col-md-8"></div>
-    <div class="col-md-4">
+    <div class="col-md-7"></div>
+    <div class="col-md-5">
     <form action="<?php echo base_url;?>categoria/save" method="POST" class="form-inline"> <!-- envia los datos  por post al CategoriacController metodo agregar -->
         <div class="form-group">
             <label for="nombre" class="bmd-label-floating">Añadir Categoria</label>
             <input type="text" name="nombre" id="" class="form-control in" >
         </div>
         <span class="form-group bmd-form-group"> <!-- needed to match padding for floating labels -->
-            <button type="submit" class="btn btn-raised btn-primary ml-2">Añadir</button>
+            <button type="submit" class="btn btn-primary btn-sm ml-2">Añadir</button>
         </span>
     </form>
     </div>
     </div>
 
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 pt-3">
     <?php if (isset($_SESSION['alert'])):?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
         ¡Categoria guardada!

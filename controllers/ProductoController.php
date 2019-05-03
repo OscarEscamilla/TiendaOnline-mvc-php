@@ -9,6 +9,8 @@ class productoController{
     }
 
     public function gestion(){
+
+        
         require_once 'views/producto/gestion.php';
     }
 }

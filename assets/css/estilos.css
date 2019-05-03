@@ -20,3 +20,8 @@
     width: 15px;
     height: 15px;
 }
+
+.btn{
+    
+    border-radius: 0px !important;
+}
