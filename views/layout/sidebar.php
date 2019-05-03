@@ -50,6 +50,7 @@
                 <?php if(isset($_SESSION['admin'])):?>
                     <a href="#" class="list-group-item list-group-item-action active  bg-dark">Gestionar Pedidos</a>
                     <a href="<?php echo base_url; ?>categoria/index" class="list-group-item list-group-item-action active  bg-dark">Gestionar Categorias</a>
+                    <a href="<?php echo base_url; ?>producto/gestion" class="list-group-item list-group-item-action active  bg-dark">Gestionar Productos</a>
                 <?php endif; ?>
                 <?php if(isset($_SESSION['usuario'])):?>
                 <a href="#" class="list-group-item list-group-item-action active  bg-dark"> Mis pedidos</a>

@@ -1,1 +1,1 @@
-<h5>Destacados view</h5>
+<div class="card-header text-white bg-dark m-0"><h4>Productos Destacados</h4></div>

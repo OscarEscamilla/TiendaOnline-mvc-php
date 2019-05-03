@@ -1,5 +1,5 @@
 
-<h5 class="mb-3">Registrate</h5>
+<div class="card-header text-white bg-dark m-0"><h4>Registrate</h4></div>
 <?php
   
 
@@ -26,6 +26,7 @@
     Utils::deleteSession('registro');
 ?>
 
+<div class="p-5">
 
 <form action="<?php echo base_url?>usuario/save"  method="POST" class="">
     <div class="form-group">
@@ -49,3 +50,5 @@
         <input type="submit" value="Registrarme" class="btn btn-raised btn-primary btn-sm ">
     </div>
 </form>
+
+</div>
