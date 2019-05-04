@@ -10,15 +10,13 @@
                         <div class="p-3">
                             <form action="<?php echo base_url;?>usuario/login" method="POST" class="">
                                 <div class="form-group">
-                                    <label for="email" class="bmd-label-floating">Email</label>
-                                    <input type="email" name="email" id="" class="form-control in" >
+                                    <input type="email" name="email" id="" class="form-control in"  placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="password" class="bmd-label-floating">Password</label>
-                                    <input type="password" name="password" id="" class="form-control in" >
+                                    <input type="password" name="password" id="" class="form-control in" placeholder="Password">
                                 </div>
                                 <?php if(isset($_SESSION['error_login'])): ?>
-                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     Correo o contraseña invalidos.
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -63,5 +61,5 @@
         <?php endif; ?>
     </div>
     <div class="col-md-9 mt-3 p-0">
-        <div class="card">
+        <div class="card content">
             <div class="card-body m-0 p-0">

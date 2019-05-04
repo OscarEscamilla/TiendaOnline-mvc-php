@@ -1,6 +1,6 @@
 
-.body{
-    height: 800px;
+.content{
+    height: 800px !important;
 }
 
 
@@ -23,5 +23,9 @@
 
 .btn{
     
+    border-radius: 0px !important;
+}
+
+.alert{
     border-radius: 0px !important;
 }

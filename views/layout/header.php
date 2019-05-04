@@ -11,14 +11,10 @@
 </head>
 <body class="container-fluid  p-0 m-0">
     <!--header-->
-    <div class="container-fluid m-0 p-0">
-        <div class="jumbotron m-0 p-1">
-            <h5 class="display-5 text-center">Tienda Online</h5> 
-        </div>
-    </div>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success ">
-            <a class="navbar-brand" href="#">Tienda</a>
+   
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info ">
+            <a class="navbar-brand" href="#">Empresa</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

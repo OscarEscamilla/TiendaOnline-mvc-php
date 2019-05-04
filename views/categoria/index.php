@@ -7,11 +7,10 @@
     <div class="col-md-5">
     <form action="<?php echo base_url;?>categoria/save" method="POST" class="form-inline"> <!-- envia los datos  por post al CategoriacController metodo agregar -->
         <div class="form-group">
-            <label for="nombre" class="bmd-label-floating">Añadir Categoria</label>
-            <input type="text" name="nombre" id="" class="form-control in" >
+            <input type="text" name="nombre" id="" class="form-control " placeholder="Nueva categoria">
         </div>
-        <span class="form-group bmd-form-group"> <!-- needed to match padding for floating labels -->
-            <button type="submit" class="btn btn-primary btn-sm ml-2">Añadir</button>
+        <span class="form-group "> <!-- needed to match padding for floating labels -->
+            <button type="submit" class="btn btn-success btn-sm ml-2">Añadir</button>
         </span>
     </form>
     </div>
