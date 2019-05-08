@@ -43,10 +43,10 @@
         </div>
 
         <?php if(isset($_SESSION['usuario'])):?>
-            <div class="list-group ml-3 mr-0 ">
+            <div class="list-group ml-3 mr-0  ">
         <?php endif; ?>
                 <?php if(isset($_SESSION['admin'])):?>
-                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">Gestionar Pedidos</a>
+                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center ">Gestionar Pedidos</a>
                     <a href="<?php echo base_url; ?>categoria/index" class="list-group-item d-flex justify-content-between align-items-center">Gestionar Categorias</a>
                     <a href="<?php echo base_url; ?>producto/gestion" class="list-group-item d-flex justify-content-between align-items-center">Gestionar Productos</a>
                 <?php endif; ?>

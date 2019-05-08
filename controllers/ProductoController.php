@@ -9,7 +9,7 @@ class productoController{
     }
 
     public function gestion(){
-
+        Utils::isAdmin();
         
         require_once 'views/producto/gestion.php';
     }

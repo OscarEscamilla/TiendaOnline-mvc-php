@@ -29,3 +29,12 @@
 .alert{
     border-radius: 0px !important;
 }
+
+.list-group-item{
+    text-decoration: none;
+}
+
+.nav-link:hover{
+
+    color: #212121 !important;
+}

@@ -15,7 +15,7 @@
             $alerta = 'danger';
             
         }
-        echo "<div class='alert alert-".$alerta." alert-dismissible fade show' role='alert'>
+        echo "<div class='alert alert-".$alerta." alert-dismissible fade show m-3' role='alert'>
                 <strong>Registro ".$_SESSION['registro']."</strong> 
                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                     <span aria-hidden='true'>&times;</span>
