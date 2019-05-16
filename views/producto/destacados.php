@@ -1,1 +1,1 @@
-<div class="card-header text-white bg-dark m-0"><h4>Productos Destacados</h4></div>
+<div class="card-header text-whitem-0"><h4>Productos Destacados</h4></div>

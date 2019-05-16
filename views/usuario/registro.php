@@ -1,5 +1,5 @@
 
-<div class="card-header text-white bg-dark m-0"><h4>Registrate</h4></div>
+<div class="card-header text-white  m-0"><h4>Registrate</h4></div>
 <?php
   
 
@@ -31,19 +31,19 @@
 <form action="<?php echo base_url?>usuario/save"  method="POST" class="">
     <div class="form-group">
         <label class="bmd-label-floating" for="nombre">Nombre</label>
-        <input type="text" class="form-control in" name="nombre" >
+        <input type="text" class="form-control-sm in" name="nombre" >
     </div>
     <div class="form-group">
         <label class="bmd-label-floating" for="apellidos">Apellidos</label>
-        <input type="text" class="form-control in" name="apellidos" >
+        <input type="text" class="form-control-sm in" name="apellidos" >
     </div>
     <div class="form-group">
         <label class="bmd-label-floating" for="email">Email</label>
-        <input type="email"  class="form-control in" name="email" >
+        <input type="email"  class="form-control-sm in" name="email" >
     </div>
     <div class="form-group">
         <label class="bmd-label-floating" for="password">Password</label>
-        <input type="password"  class="form-control in" name="password" >
+        <input type="password"  class="form-control-sm in" name="password" >
     </div>
     <div class="form-group">
         <br>

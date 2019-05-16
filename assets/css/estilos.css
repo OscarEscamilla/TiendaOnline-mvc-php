@@ -35,6 +35,24 @@
 }
 
 .nav-link:hover{
+    background-color: #58595a;
+  
+}
 
-    color: #212121 !important;
+.list-group-item:hover{
+    color: aliceblue;
+    background-color: #58595a;
+}
+
+.list-group-item{
+    color: white;
+}
+
+.text-white{
+    color: white;
+}
+
+
+.input-group-prepend{
+    border: solid rgb(148, 147, 147) 1px;
 }

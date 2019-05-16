@@ -1,4 +1,4 @@
-<div class="card-header text-white bg-dark m-0"><h4>Categorias</h4></div>
+<div class="card-header text-white  m-0"><h4>Categorias</h4></div>
 <div class="p-3">
 <div class="pl-15">
     <div class="row">
@@ -7,7 +7,7 @@
     <div class="col-md-5">
     <form action="<?php echo base_url;?>categoria/save" method="POST" class="form-inline"> <!-- envia los datos  por post al CategoriacController metodo agregar -->
         <div class="form-group">
-            <input type="text" name="nombre" id="" class="form-control " placeholder="Nueva categoria">
+            <input type="text" name="nombre" id="" class="form-control-sm " placeholder="Nueva categoria">
         </div>
         <span class="form-group "> <!-- needed to match padding for floating labels -->
             <button type="submit" class="btn btn-success btn-sm ml-2">Añadir</button>
@@ -30,7 +30,7 @@
     <!-- tabla que muestra todas las categoria -->
    
         <table class="table table-striped">
-            <thead >
+            <thead class="">
                 <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Nombre</th>
