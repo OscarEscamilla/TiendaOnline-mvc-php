@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 
 class Producto{
@@ -118,4 +119,20 @@ class Producto{
         }
        
     }
+=======
+<?php 
+
+class Producto{
+
+    private $id;
+    private $name;
+    private $price;
+    private $con;
+   
+
+
+    public function __construct(){
+        $this->con = Database::connect();
+    }
+>>>>>>> b83a338fd217011940fb357b68c8da4a972acdda
 }

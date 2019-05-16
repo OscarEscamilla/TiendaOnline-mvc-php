@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 require_once 'models/Producto.php';
@@ -34,4 +35,21 @@ class productoController{
         }
         //recibe formularios del archivo views/producto/nuevo.php
     }
+=======
+<?php
+
+
+class productoController{
+
+    public function index(){
+        //renderizar vista 
+        require_once 'views/producto/destacados.php';
+    }
+
+    public function gestion(){
+        Utils::isAdmin();
+        
+        require_once 'views/producto/gestion.php';
+    }
+>>>>>>> b83a338fd217011940fb357b68c8da4a972acdda
 }

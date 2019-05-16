@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .content{
     height: 800px !important;
@@ -56,3 +57,45 @@
 .input-group-prepend{
     border: solid rgb(148, 147, 147) 1px;
 }
+=======
+
+.content{
+    height: 800px !important;
+}
+
+
+.in{
+    width: 100% !important;
+}
+
+.bg-dark{
+    background: #232323 !important;
+}
+
+.btn-primary{
+    background: #3b3ec0 !important;
+}
+
+.icon{
+    width: 15px;
+    height: 15px;
+}
+
+.btn{
+    
+    border-radius: 0px !important;
+}
+
+.alert{
+    border-radius: 0px !important;
+}
+
+.list-group-item{
+    text-decoration: none;
+}
+
+.nav-link:hover{
+
+    color: #212121 !important;
+}
+>>>>>>> b83a338fd217011940fb357b68c8da4a972acdda
